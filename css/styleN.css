@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;900&display=swap');
+
+:root{
+    --body: #171717;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.navL-img{
+    min-width: 10rem;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 3.5rem 0 0 0;
+    font-family: 'Popins',sans-serif;
+    font-size: .938rem;
+    background: var(--body);
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+.stitle {
+    font-size: 2.25rem !important;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.grid {
+    display: grid;
+}
+
+.main {
+    overflow: hidden;
+}
+.container{
+    max-width: 968px;
+    margin: 0 1.5rem;
+}
+.header{
+    width: 100%;
+    background: var(--body);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.nav{
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navL{
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    font-weight: 500;
+}
+.navL-img{
+    width: 1.25rem;
+}
+.navLink,
+.navL,
+.navToggle,
+.navClose{
+    color: #fff;
+}
+.navToggle{
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+@media screen  and (max-width: 767px){
+    .navM{
+        position: fixed;
+        width: 100%;
+        background: var(--body);
+        top: -150%;
+        left: 0;
+        padding: 3.5rem 0;
+        transition: .4s;
+        z-index: 100;
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+}
+.navClose{
+    font-size: 1.8rem;
+    position: absolute;
+    top: .5rem;
+    right: .7rem;
+    cursor: pointer;
+}
+.navList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+}
+.navLink{
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: .4s;
+}
+.navLink:hover{
+    color: #fff;
+}
+.show-manu{
+    top: 0;
+}
+.scroll-header{
+    background: var(--body);
+}
+.active-link{
+    position: relative;
+}
+.active-link::before{
+    content: '';
+    position: absolute;
+    bottom: -.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+@media screen and (min-width: 767px) {
+    body {
+        margin: 0;
+    }
+
+    .section {
+        padding: 7rem 0 2rem;
+    }
+
+    .nav {
+        height: calc(3.5rem + 1.5rem);
+    }
+
+    .navClose,
+    .navToggle {
+        display: none;
+    }
+
+    .navList {
+        flex-direction: row;
+        column-gap: 3rem;
+    }
+
+    .navLink {
+        text-transform: initial;
+        font-weight: initial;
+    }
+}
+@media screen and (min-width: 992px) {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+h1{
+    color: #fff;
+    font-weight: 600;
+}
+.section{
+    padding: 4.5rem 0 2rem;
+}
+.stitle{
+    font-size: 2.25rem !important;
+}
+.grid{
+    display: grid;
+}
+.main{
+    overflow: hidden;
+}
+.homecont{
+    row-gap: 1rem;
+}
+.homeimg{
+    height: 250px;
+    width: 100%;
+    justify-self: center;
+}
+.homet{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 109%;
+    margin-bottom: -2rem;
+}
+.homedes{
+    margin-bottom: 1rem;
+    color: #fff;
+}
+.homebut{
+    display: flex;
+}
+.homebut a{
+    margin-right: 10px;
+}
+.button{
+    display: inline-block;
+    background-color: #8d1d1dff;
+    color: #fff;
+    padding: 1rem 1.75rem;
+    border-radius: .5rem;
+    font-weight: 500;
+    transition: .3s;
+}
+.button:hover{
+    background-color: #666666;
+}
+.buttonicon{
+    font-size: 1.25rem;
+}
+
+.abcontainer {
+    row-gap: 2rem;
+}
+
+.abdata {
+    text-align: center;
+}
+
+.abdes {
+    margin-bottom: 2rem;
+}
+.aboutimg {
+    width: 200px;
+    justify-self: center;
+}
+@media screen and (min-width: 576px) {
+
+    .abcontainer {
+        grid-template-columns: .8fr;
+        justify-content: center;
+    }
+}       
+@media screen and (min-width: 767px) {
+    .abcontainer {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .abti,
+    .abdata {
+        text-align: initial;
+
+    }
+
+    .aboutimg {
+        width: 250px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .abcontainer {
+        column-gap: 7rem;
+    }
+
+    .aboutimg {
+        width: 350px;
+    }
+
+    .abdes {
+        padding-right: 2rem;
+
+    }
+}
+@media screen and (max-width: 320px) {
+    .container {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .homeimg {
+        height: 500px;
+    }
+
+    .homebut {
+        flex-direction: column;
+        width: max-content;
+        row-gap: 1rem;
+    }
+}
+@media screen and (min-width: 767px) {
+    .section {
+        padding: 7rem 0 2rem;
+    }
+    .homecont {
+        padding: 8rem 0 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+
+    .homeimg {
+        height: 400px;
+    }
+}
+@media screen and (min-width: 992px) {
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .stitle {
+        font-size: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .homecont {
+        padding-top: 9rem;
+        gap: 3rem;
+    }
+
+    .homeg {
+        padding-top: 50px;
+    }
+
+    .homeimg {
+        height: 300px;
+        transform: translateY(-3rem);
+    }
+
+    .homet {
+        margin-bottom: 1.5rem;
+    }
+
+    .homedes {
+        margin-bottom: 1.5rem;
+        padding-right: .1rem;
+    }
+}
+@media screen and (min-width: 1200px) {
+
+    .homeimg {
+        height: 420px;
+    }
+
+
+}
+.footer{
+    position: relative;
+    overflow: hidden;
+    }
+    
+    .ftcontainer {
+    row-gap: 2rem;
+    }
+    
+    .footerL {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: #fff;
+    }
+    
+    .footerL-img {
+    width: 120px;
+    }
+    
+    .footerdescription {
+    margin-bottom: 2.5rem;
+    color: #fff;
+    }
+    
+    .footersocial {
+    display: flex;
+    column-gap: .75rem;
+    }
+    
+    .footersocial-link {
+    display: inline-flex;
+    background: #0c0b0b;
+    padding: .25rem;
+    border-radius: .25rem;
+    color: #fff;
+    font-size: 1rem;
+    }
+    
+    .footersocial-link:hover {
+    background-color: #f9580e;
+    }
+    
+    .ftti {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    }
+    
+    .ftli {
+    display: grid;
+    row-gap: .35rem;
+    }
+    
+    .ftrli {
+    font-size: .813rem;
+    color: #fff;
+    transition: .3s;
+    }
+    
+    .ftrli:hover {
+    color: #d93b00;
+    
+    }
+    
+    .footercopy {
+    display: block;
+    text-align: center;
+    font-size: .75rem;
+    margin-top: 4.5rem;
+    }
+    
+    .scrollup {
+    position: fixed;
+    background: #0c0b0b;
+    right: 1rem;
+    bottom: -20%;
+    display: inline-flex;
+    padding: .3rem;
+    border-radius: .25rem;
+    z-index: 10;
+    opacity: .8;
+    transition: .4s;
+    }
+    
+    .scrollupicon {
+    font-size: 1.25rem;
+    color: #fff;
+    }
+    
+    .scrollup:hover {
+    background: #f9580e;
+    opacity: 1;
+    }
+    
+    .show-scroll {
+    bottom: 3rem;
+    }
+    
+    
+    ::-webkit-scrollbar {
+    width: 0.6rem;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+    background: #272525;
+    border-radius: .5rem;
+    }
+    
+    @media screen and (min-width: 767px) {
+    .ftcontainer {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      column-gap: 1rem;
+    }
+    }
+    @media screen and (min-width: 992px) {
+    
+      .footercopy {
+        margin-top: 6rem;
+    }
+    }
+    .footer {
+      position: relative;
+      top: 50px;
+      overflow: hidden;
+    }
+    
+    .ftcontainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      justify-content: center;
+      row-gap: 2rem;
+      margin: 0 auto;
+      margin-left: 1.5rem;
+      max-width: 1200px;
+    }
+    
+    .footerL {
+      display: flex;
+      align-items: center;
+      column-gap: .5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #fff;
+    }
+    
+    .footerL-img {
+      width: 200px;
+    }
+    
+    .footerdescription {
+      margin-bottom: 2.5rem;
+    }
+    
+    .footersocial {
+      display: flex;
+      column-gap: .75rem;
+    }
+    
+    .footersocial-link {
+      display: inline-flex;
+      background: #0c0b0b;
+      padding: .25rem;
+      border-radius: .25rem;
+      color: #fff;
+      font-size: 1rem;
+    }
+    
+    .footersocial-link:hover {
+      background-color: var(--dark);
+    }
+    
+    .ftti {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: #fff;
+    }
+    
+    .ftli {
+      display: grid;
+      row-gap: .35rem;
+    }
+    
+    .ftrli {
+      font-size: .813rem;
+      color: #fff;
+      transition: .3s;
+    }
+    
+    .ftrli:hover {
+      color: #918f8f;
+    }
+    
+    .footercopy {
+      display: block;
+      text-align: center;
+      font-size: .75rem;
+      color: #fff;
+      margin-top: 4.5rem;
+    }
+    
+    .scrollup {
+      position: fixed;
+      background: #0c0b0b;
+      right: 1rem;
+      bottom: -20%;
+      display: inline-flex;
+      padding: .3rem;
+      border-radius: .25rem;
+      z-index: 10;
+      opacity: .8;
+      transition: .4s;
+    }
+    
+    .scrollupicon {
+      font-size: 1.25rem;
+      color: #fff;
+    }
+    
+    .show-scroll {
+      bottom: 3rem;
+    }
+    @media screen and (min-width: 780px) {
+      .nav {
+          height: calc(3.5rem + 1.5rem);
+      }
+    
+      .navClose,
+      .navToggle {
+          display: none;
+      }
+    
+      .navList {
+          flex-direction: row;
+          column-gap: 3rem;
+      }
+    
+      .navLink {
+          text-transform: initial;
+          font-weight: initial;
+      }
+    
+      .ftcontainer {
+          grid-template-columns: repeat(4, 1fr);
+          justify-items: center;
+          column-gap: 1rem;
+      }
+    
+    }
+    @media screen and (max-width: 767px) {
+      .footer {
+          margin-left: 1.5rem;
+      }
+    }
+    .show-menu {
+        top: 0;
+    }

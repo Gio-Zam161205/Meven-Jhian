@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI';
+}
+:root{
+    --color1: #fff;
+    --color2: #00CED1;
+}
+.background {
+    background: url(https://tse3.mm.bing.net/th?id=OIP.CSBZUWcRqPvpy7e2be3aPQHaEK&pid=Api&P=0&h=180) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 25px 13%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a {
+    position: relative;
+    font-size: 16px;
+    color: var(--color1);
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color1);
+    bottom: -5px;
+    border-radius: 5px;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: -5 ease;
+}
+
+.navbar a:hover:after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.search-bar {
+    width: 250px;
+    height: 45px;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--color1);
+    font-size: 16px;
+    padding-left: 10px;
+}
+.search-bar button {
+    width: 40px;
+    height: 100%;
+    background: transparent; 
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.search-bar button i {
+    width: 40px;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: var(--color1);
+    cursor: pointer;
+}
+.search-bar input::placeholder {
+    color: var(--color1);
+}
+
+.search-bar button {
+    font-size: 22px;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 550px;
+    margin-top: 20px;
+    background: #0009;
+    backdrop-filter: blur(7px);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 58%;
+    height: 100%;
+    color: var(--color1);
+    background: transparent;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.item .logo {
+    color: var(--color1);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.text-item h2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.text-item p {
+    font-size: 16px;
+    margin: 20px 0;
+}
+
+.social-icon a i {
+    color: var(--color1);
+    font-size: 24px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.social-icon a:hover i {
+    transform: scale(1.2);
+}
+
+.container .login-section {
+    width: 50%;
+    height: 100%;
+    color: var(--color1);
+    background-color: transparent;
+}
+
+.login-section .form-box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.login-section .form-box#sigin {
+    transform: translateX(-100vw);
+    transition: transform .6s ease;
+}
+
+.login-section .form-box.login {
+    transition: transform .6s ease;
+}
+
+.login-section .form-box h2 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.form-box .input-box {
+    width: 340px;
+    height: 50px;
+    border-bottom: 7px solid var(--color1);
+    margin: 30px 0;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding-right: 28px;
+    color: var(--color1);
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600px;
+    pointer-events: none;
+    transition: .5s ease;
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 13px;
+    right: 0;
+    font-size: 19px;
+}
+
+.input-box input:focus~ label,
+.input-box input:valid~ label {
+    top: -5px;
+}
+
+.remember-password {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-password label input {
+    accent-color: var(--color1);
+    margin-right: 3px;
+}
+
+.remember-password a {
+    color: var(--color1);
+    text-decoration: none;
+}
+
+.remember-password a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    background: var(--color1);
+    width: 100%;
+    height: 45px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--color2);
+    font-size: 16px;
+    color: var(--color1);
+}
+
+.create-account {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 25px;
+}
+
+.create-account p a {
+    color: var(--color1);
+    font-weight: 600px;
+    text-decoration: none;
+}
+
+.create-account p a:hover {
+    text-decoration: underline;
+}
+.search-bar .bx{
+        padding-top: 0.5rem;
+    }
+@media screen and (max-width: 1060px) {
+
+    body {
+        overflow: hidden;
+    }
+    .header{
+        padding: 25px 5%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .item{
+        flex-direction: row;
+        justify-content: space space-evenly;
+        height: max-content;
+        width: 100%;
+    }
+    .item .text-item{
+        display: none; 
+    }
+
+    .login-section {
+        width: 100%;
+        border: 1px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-box{
+        padding: 2rem;
+    }
+    .form-box, .form-box *{
+        max-width: 100%;
+    }
+
+    .social-icon {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        height: max-content;
+        margin-top: 0.5rem;
+    }
+
+    .social-icon a {
+        margin: 0 10px;
+    }
+
+    .menu-icon {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 20px;
+        width: 30px;
+        position: fixed;
+        top: 25px;
+        left: 25px;
+        z-index: 1100;
+        margin-top: 2rem;
+    }
+
+    .bar {
+        width: 30px;
+        height: 3px;
+        background-color: var(--color1);
+        transition: 0.3s;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(5px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        z-index: 1000;
+        padding: 50px 20px;
+        transition: 0.3s;
+    }
+
+    .navbar a {
+        color: var(--color1);
+        font-size: 18px;
+        margin: 10px 0;
+        text-decoration: none;
+    }
+
+    .search-bar {
+        width: calc(90% - 70px);
+        margin-top: 20px;
+        position: absolute;
+        right: 2rem;
+        top: 1.5rem;
+    }
+
+    .search-bar input {
+        width: calc(100% - 30px);
+    }
+
+    .search-bar button {
+        width: 20px;
+    }
+
+    .menu-open .navbar {
+        display: flex;
+    }
+
+    .menu-open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-open .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .search-bar i{
+        padding-right: 1.5rem;
+        margin-right: 1rem;
+    }
+}
+@media screen and (max-width: 580px) {
+    .logo p{
+        display: none;
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unete a Maven Jhian</title>
+    <link rel="stylesheet" href="css/stylesi.css">
+</head>
+
+<body>
+    <section class="sec">
+        <header>
+            <nav>
+                <a href="#"><img src="img/MAVEN LETRA BLANCA.png" class="Logo"></a>
+                <ul class="navList">    
+                    <li class="navItem">
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Maven Jhian<BR><span>Estilo</span></BR>
+                </h2>
+                <p>"En el mundo de la moda, cada hilo cuenta una historia.
+                     Maven Jhian no es solo una marca, es una experiencia.
+                      Somos la fusión perfecta de elegancia atemporal 
+                      y tendencias vanguardistas. Cada diseño está cuidadosamente
+                       elaborado para reflejar la sofisticación y la singularidad que 
+                       llevas contigo."</p>
+                    <a href="indexL.html">Unete</a>
+            </div>
+            <div class="imgBox">
+                <img src="img/PLAYERA 5.png" class="RopaHombre">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/JC-100.png" onclick="imgSlider('img/JC-100.png');changebgColor('#610B0B ')"></li>
+            <li><img src="img/PLAYERA 4.png" onclick="imgSlider('img/PLAYERA 4.png');changebgColor('#e60c2c')"></li>
+            <li><img src="img/pans.png" onclick="imgSlider('img/pans.png');changebgColor('#DC3408')"></li>
+            
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+            <li><a href="#"><img src="img/tik-tok.png"></a></li>
+        </ul>
+    </section>
+<script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.RopaHombre').src=anything;
+    }
+    function changebgColor(color){
+        const sec= document.querySelector('.sec');
+        sec.style.background = color;
+    }
+</script>
+</body>
+
+</html>

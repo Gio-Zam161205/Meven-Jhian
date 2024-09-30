@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #080f3b;
+    transition: 0.5s;
+
+}
+.navL-img {
+    min-width: 10rem;
+    margin-right: 5rem;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*LOGO*/
+header .Logo {
+    position: relative;
+    max-width: 80px;
+}
+header ul {
+    position:relative;
+    display: flex;
+}
+
+/*INICIO SERVICIOS SOBRE NOSOTROS*/
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content .textBox {
+    position: relative; 
+    max-width: 600px;
+    margin-top: -120px;
+}
+.content .textBox h2{
+color: #fff;
+font-size: 4em;
+top: 10px;
+line-height: 1.5em;
+font-weight: 900;
+text-transform: uppercase;
+
+}
+
+.content .textBox h2 span {
+    font-size: 2em;
+    top: 10px;
+
+}
+.content .textBox p {
+    color: #fff;
+
+}
+
+/*BOTON*/
+.content .textBox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: #fff;
+    color: #111;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content .imgBox {
+    width: 100px;
+    display: flex;
+    padding-right: 50px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+.content .imgBox img {
+    max-width: 260px;
+    filter: drop-shadow(15px 5px 5px rgb(0, 72, 255));
+}
+
+.thumb {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 20px;
+    display: flex;
+}
+.thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb li img {
+    max-width: 50px;
+    filter: drop-shadow(15px 5px 5px rgb(0, 72, 255));
+}
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*Tamaño de iconos RD*/
+.sci img {
+    width: 30px;
+    height: 30px;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    filter: invert(1);
+    margin: 5px 0;
+    transform: scale(0.6);
+}
+ul#navigation {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav .Logo {
+    max-height: 150px;
+}
+
+.navList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navItem {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 900px;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 150px;
+    border-radius: 10px;
+    margin-left: 900px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    color: #fff;
+    font-size: 16px;
+}
+
+.dropdown-content a:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.show {
+    display: block;
+}
+/*TAMAÑO TABLETA*/
+@media screen and (max-width: 768px) {
+
+    /*TEXTO LEYSTAR INOVA Y ELEGANCIA*/
+    .content .textBox h2 span {
+        font-size: 1em;
+
+
+    }
+
+    /*RESETEANDO EL PADDING 
+    y AUMENTANDO EL VH Y 
+    APLICO EL HIDDEN PARA BORRAR SOBRAS
+     A LOS COSTADOS*/
+    section {
+        padding: 30px;
+        height: 200vh;
+        overflow-x: hidden;
+        top: -20%;
+    }
+
+    /*ACOMODANDO LOGO*/
+    header .Logo {
+        position: relative;
+        max-width: 170px;
+        margin-top: 210px;
+        margin-left: -80px;
+    }
+
+    /*ALARGAMOS LA PAGINA   VH*/
+    body {
+        height: 160vh;
+
+    }
+
+    /*CAMBIAR POSICION DE IMAGEN GRANDE PRINCIPAL*/
+    .content .imgBox img {
+        max-width: 260px;
+        margin-top: 760px;
+        margin-left: -4000px;
+    }
+
+}
+
+
+
+/*tamaño Phone 13 pro*/
+@media screen and (max-width: 390px) {
+
+    /*TEXTO LEYSTAR INOVA Y ELEGANCIA*/
+    .content .textBox h2 span {
+        font-size: 1em;
+
+
+    }
+
+    /*RESETEANDO EL PADDING 
+    y AUMENTANDO EL VH Y 
+    APLICO EL HIDDEN PARA BORRAR SOBRAS
+     A LOS COSTADOS*/
+    section {
+
+        height: 200vh;
+        overflow-x: hidden;
+        top: -20%;
+    }
+
+    /*PADDING A LOS COSTADOS (CENTRANDO)*/
+    .sec {
+
+        padding: 10px;
+    }
+
+    /*ACOMODANDO LOGO*/
+    header .Logo {
+        position: relative;
+        max-width: 200px;
+        margin-top: 200px;
+        margin-left: -100px;
+    }
+
+    /*CAMBIAR POSICION DE IMAGEN GRANDE PRINCIPAL*/
+    .content .imgBox img {
+        max-width: 260px;
+        margin-top: 760px;
+        margin-left: -4000px;
+    }
+
+    /*thumb es el contenedor de las img slider,
+    cambiar medida*/
+    .thumb img {
+        gap: 50rem;
+    }
+
+    /*TOP DE ICONOS HACIA ARRIBA*/
+    .sci {
+        top: 22%;
+    }
+
+}
+
+/*TAMAÑO PHONE X */
+@media screen and (max-width: 375px) {
+    section {
+        padding: 10px;
+    }
+}

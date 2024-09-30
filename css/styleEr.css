@@ -1,0 +1,207 @@
+:root{
+    --fondo: #28254C;
+    --letter: #EDEDED;
+    --letter2: #BFC0C0;
+    --ghost: #EDEDED;
+    --ojos: #585959; 
+    --shadow: #BFC0C0;
+}
+body{
+    background-image: 
+    linear-gradient(426deg, transparent 0%, transparent 24%,rgba(29,116,255, 0.04) 24%, rgba(29,116,255, 0.04) 80%,transparent 80%, transparent 100%),
+    linear-gradient(513deg, transparent 0%, transparent 29%,rgba(29,116,255, 0.04) 29%, rgba(29,116,255, 0.04) 45%,transparent 45%, transparent 100%),
+    linear-gradient(559deg, transparent 0%, transparent 32%,rgba(29,116,255, 0.04) 32%, rgba(29,116,255, 0.04) 59%,transparent 59%, transparent 100%),
+    linear-gradient(637deg, transparent 0%, transparent 56%,rgba(29,116,255, 0.04) 56%, rgba(29,116,255, 0.04) 57%,transparent 57%, transparent 100%),
+    linear-gradient(450deg, rgb(0,0,0),rgb(0,0,0));
+    height: 100vh;
+    margin: 0 ;
+}
+.page{
+position: absolute;
+width: 100%;
+height: 100%;
+z-index: 1;
+font-family: Roboto, sans-serif;
+overflow: hidden;
+}
+
+.top {
+    margin-top: 30px;
+}
+h1{
+ color: var(--letter);
+ font-family: "Abril Fatface", serif;
+ text-align: center;
+ font-size: 9em;
+ margin: 0;
+ text-shadow: 
+ -1px 0 var(--letter2),
+ 0 1px var(--letter2),
+ 1px 0 var(--letter2),
+ 0 -1px var(--letter2); 
+}
+h3{
+    color: var(--letter2);
+    font-family: "Lato", sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: -20px;
+    font-weight: 900;
+}
+.container{
+    margin: 0 auto;
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin-top: -40px;
+}
+.ghost{
+    width: 50%;
+    height: 53%;
+    border-radius:  50% 50% 0 0;
+    background: var(--ghost);
+    border-bottom: none;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    animation: float 2s ease-in-out infinite;
+}
+.eye,
+.eye-rigth{
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    background: #585959;
+    border-radius: 50%;
+    top: 40%;
+}
+.eye{
+    left: 25%;
+}
+.eye-rigth{
+    right: 25%;
+}
+.mouth{
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    border-color: transparent #585959 
+    #585959 transparent;
+    border-radius: 50%;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    z-index: 1;
+}
+.one,
+.two,
+.three,
+.four{
+    width: 25%;
+    height: 23%;
+    background: #EDEDED;
+    position: absolute;
+    top: 85%;
+    z-index: 0;
+}
+.one{
+    border-radius: 0 0 100% 30%;
+}
+.two{
+    left: 23%;
+    border-radius: 0 0 50% 50%;
+}
+.three{
+    left: 50%;
+    border-radius: 0 0 50% 50%;
+}
+.four{
+    left: 75%;
+    border-radius:  0 0 30% 100%;
+}
+.shadow{
+    width: 30%;
+    height: 7%;
+    background: #BFC0C0;
+    border-radius: 50%;
+    position: absolute;
+    left: 35%;
+    top: 80%;
+    animation: scale 2s infinite;
+}
+@keyframes scale {
+    0%{
+       transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes float {
+   50%{
+    transform: translateY(15px);
+   }
+}
+p{
+    font-size: 1em;
+    font-weight: 300;
+    margin-bottom: 100px;
+    color: var(--letter2);
+    font-family: "Lato", sans-serif;
+    opacity: 0.7;
+    text-align: center;
+}
+a{
+    color: #EDEDED;
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: 300;
+    text-transform: uppercase;
+    border: 1px solid var(--ojos);
+    padding: 8px 14px;
+    border-radius: 4px;
+    opacity: 0.4;
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+header{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav{
+    width: 30px;
+    height: 3px;
+    background: var(--ojos);
+    border-radius: 2px;
+    box-shadow: 
+    0 -10px 0 var(--ojos),
+    0 10px 0 var(--ojos);
+    position: relative; 
+    top: 20px;
+    left: 6px;
+}
+
+nav::before,
+nav::after {
+    content: ''; /* Añadir contenido vacío para que se creen los pseudo-elementos */
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: var(--ojos);
+    border-radius: 2px;
+}
+.search{
+    top: 15px;
+    font-size: 1.5em;
+    margin-left: 90%;
+}
